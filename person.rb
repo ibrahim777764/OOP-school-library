@@ -1,16 +1,21 @@
-require_relative 'person'
+class Person
+  attr_accessor :name, :age, :parent_permission
 
-# Class Teacher inherits from Person
-class Teacher < Person
-  def initialize(specialization, age, name, parent_permission)
-    super(age, name, parent_permission: parent_permission)
+  def initialize(age, name = 'Unknown', parent_permission: true)
+    @id = Random.rand(1..1000)
+    @name = name
+    @age = age
+    @parent_permission = parent_permission
+  end
 
-    @specialization = specialization
+  def of_age?
+    of_age >= 18
   end
 
   def can_use_services?
-    true
+    of_age || parent_permission
   end
+  private :of_age?
 end
 
-puts Teacher.new('Maths', 30, 'ABC', parent_permission: false).specialization
+puts Person.new(22, 'ibrahim', parent_permission: false).parent_permission
