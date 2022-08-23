@@ -22,9 +22,11 @@ To get a local copy up and running follow these simple example steps.
 - Hava a basic knowledge of `Ruby` and `OOP` concept
 - Have `visual-studio code` or any other code editor installed on your computer.
 
-### Setup
-- In order to get a copy of this project you need to download it from https://github.com/ibrahim777764/OOP-school-library
-- Extract the zipped file and open it in your code editor
+## Setup
+
+If you wish to run the project locally, please do the following:
+
+- Clone the repository to your local machine. - **`git@github.com:ibrahim777764/OOP-school-library.git`** - **`cd OOP-school-library`**
 ### Install
 - Run the command bellow in your terminal to get all required files
 ```
@@ -44,12 +46,6 @@ I am an aspiring web developer from pakistan.
 - GitHub: [@ibrahimgit](https://github.com/ibrahim777764)
 - Twitter: [Ibrahimtwit](https://twitter.com/Ibrahim66650696)
 - LinkedIn: [@ibrahimlin](https://www.linkedin.com/in/ibrahim-naseer-215667225/)
-
-## Setup
-
-If you wish to run the project locally, please do the following:
-
-- Clone the repository to your local machine. - **`git clone git@github.com:ibrahim777764/vet-clinic.git`** - **`cd Vet-clinic`**
 
 
 ## 🤝 Contributing
