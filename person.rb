@@ -22,3 +22,4 @@ class Person < nameable
 end
 
 puts Person.new(22, 'ibrahim', parent_permission: false).parent_permission
+
