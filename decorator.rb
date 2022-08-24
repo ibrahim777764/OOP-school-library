@@ -29,4 +29,3 @@ class TrimmerDecorator < BaseDecorator
     corrected_name
   end
 end
-
