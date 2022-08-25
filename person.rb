@@ -18,6 +18,16 @@ class Person < nameable
   def can_use_services?
     of_age || parent_permission
   end
+
+  def correct_name
+    @name
+  end
+
+  def add_rentals(rental)
+    @rentals.push(rental)
+    rental.person = self
+  end
+
   private :of_age?
 end
 
