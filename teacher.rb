@@ -1,10 +1,8 @@
-require_relative 'person'
+require('./person')
 
-# Class Teacher inherits from Person
 class Teacher < Person
-  def initialize(specialization, age, name, parent_permission)
+  def initialize(specialization, age, name = 'unknown', parent_permission: true)
     super(age, name, parent_permission: parent_permission)
-
     @specialization = specialization
   end
 
@@ -12,5 +10,3 @@ class Teacher < Person
     true
   end
 end
-
-# puts Teacher.new('english', 22, 'ibrahim', parent_permission: false).specialization
