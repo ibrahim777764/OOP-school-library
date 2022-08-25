@@ -12,4 +12,7 @@ class Student < Person
   end
 end
 
-# puts Student.new('A', 22, 'IBRAHIM', parent_permission:false).classroom
+def add_classroom(classroom)
+  @classroom = classroom
+  classroom.students.push(self) unless classroom.students.include?(self)
+end
