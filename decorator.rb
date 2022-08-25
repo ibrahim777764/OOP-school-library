@@ -4,28 +4,27 @@ class Nameable
   end
 end
 
-class BaseDecorator < Nameable
+class Decorator < Nameable
+  attr_accessor :nameable
+
   def initialize(nameable)
     super()
-
     @nameable = nameable
   end
 
   def correct_name
-    @nameable.correct_name
+    @namable.correct_name
   end
 end
 
-class CapitalizeDecorator < BaseDecorator
+class CapitalizeDecorator < Decorator
   def correct_name
     @nameable.correct_name.capitalize
   end
 end
 
-class TrimmerDecorator < BaseDecorator
+class TrimmerDecorator < Decorator
   def correct_name
-    corrected_name = @nameable.correct_name
-    corrected_name = corrected_name[0..9] if corrected_name.size > 10
-    corrected_name
+    @nameable.correct_name.slice(0, 10) unless @nameable.correct_name.length <= 10
   end
 end
