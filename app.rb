@@ -25,11 +25,6 @@ class App
     end
   end
 
-  def list_all_books
-    puts 'Database is empty! Add a book.' if @books.empty?
-    @books.each { |book| puts "[Book] Title: #{book.title}, Author: #{book.author}" }
-  end
-
   def list_all_persons
     puts 'Database is empty! Add a person.' if @persons.empty?
     @persons.each { |person| puts "[#{person.class.name}] Name: #{person.name}, Age: #{person.age}, id: #{person.id}" }
@@ -82,15 +77,20 @@ class App
     puts 'Teacher created successfully'
   end
 
-  def create_book()
-    puts 'Create a new book'
-    print 'Enter title: '
-    title = gets.chomp
-    print 'Enter author: '
-    author = gets
-    book = Book.new(title, author)
-    @books.push(book)
-    puts "Book #{title} created successfully."
+  def list_all_rentals
+    print 'To see person rentals enter the person ID: '
+    id = gets.chomp.to_i
+
+    puts 'Rented Books:'
+    @rentals.each do |rental|
+      if rental.person.id == id
+        puts "Person: #{rental.person.name} Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
+
+      else
+        puts
+        puts 'No records where found for the given ID'
+      end
+    end
   end
 
   def create_rental
@@ -115,19 +115,4 @@ class App
     puts 'Rental created successfully'
   end
 
-  def list_all_rentals
-    print 'To see person rentals enter the person ID: '
-    id = gets.chomp.to_i
-
-    puts 'Rented Books:'
-    @rentals.each do |rental|
-      if rental.person.id == id
-        puts "Person: #{rental.person.name} Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
-
-      else
-        puts
-        puts 'No records where found for the given ID'
-      end
-    end
-  end
 end

@@ -1,15 +1,22 @@
-require './rental'
+# require './rental'
 
 class Book
-  attr_accessor :title, :author, :rentals
+  attr_accessor :title, :author
 
-  def initialize(title, author)
-    @title = title
-    @author = author
-    @rentals = []
+  def initialize
+    @books = []
   end
 
-  def add_rentals(date, person)
-    Rental.new(date, person, self)
+  def list_all_books
+    puts 'Database is empty! Add a book.' if @books.empty?
+    @books.each { |book| puts "[Book] Title: #{book.title}, Author: #{book.author}" }
   end
+
+  def push_book(title, author)
+    
+  end
+
+  # def add_rentals(date, person)
+  #   Rental.new(date, person, self)
+  # end
 end

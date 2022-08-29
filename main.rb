@@ -1,8 +1,20 @@
 require './app'
+require './book.rb'
+require './new_book.rb'
 
 def main
   app = App.new
   app.start_console
+end
+
+def book_listing
+  book = Book.new
+  book.list_all_books
+end
+
+def book_creation
+  newbook = BookCreation.new('undefined', 'undefined')
+  newbook.create_book
 end
 
 def list_of_options
@@ -20,13 +32,13 @@ end
 def option(input)
   case input
   when '1'
-    list_all_books
+    book_listing
   when '2'
     list_all_persons
   when '3'
     create_person
   when '4'
-    create_book
+    book_creation
   when '5'
     create_rental
   when '6'
