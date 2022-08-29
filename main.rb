@@ -18,15 +18,16 @@ def list_of_options
 end
 
 def option(input)
+  app = App.new
   case input
   when '1'
-    list_all_books
+    app.books_class.list_all_books
   when '2'
     list_all_persons
   when '3'
     create_person
   when '4'
-    create_book
+    app.books_class.create_book
   when '5'
     create_rental
   when '6'

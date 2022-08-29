@@ -4,10 +4,14 @@ require './teacher'
 require './book'
 require './classroom'
 require './rental'
+require './bookLogic'
 
 class App
+
+  attr_accessor :books_class
+
   def initialize
-    @books = []
+    @books_class = BookLogic.new
     @persons = []
     @rentals = []
   end
@@ -80,17 +84,6 @@ class App
     teacher = Teacher.new(specialization, age, name)
     @persons.push(teacher)
     puts 'Teacher created successfully'
-  end
-
-  def create_book()
-    puts 'Create a new book'
-    print 'Enter title: '
-    title = gets.chomp
-    print 'Enter author: '
-    author = gets
-    book = Book.new(title, author)
-    @books.push(book)
-    puts "Book #{title} created successfully."
   end
 
   def create_rental
