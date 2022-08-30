@@ -29,9 +29,9 @@ def option(input)
   when '4'
     app.books_class.create_book
   when '5'
-    create_rental
+    app.rentals.create_rental
   when '6'
-    list_all_rentals
+    app.rentals.list_all_rentals
   else
     puts 'Please enter a number between 1 and 7.'
   end
