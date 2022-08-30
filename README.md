@@ -48,6 +48,12 @@ I am an aspiring web developer from pakistan.
 - LinkedIn: [@ibrahimlin](https://www.linkedin.com/in/ibrahim-naseer-215667225/)
 
 
+👤 **NabilHY**
+
+- GitHub: https://github.com/NabilHY
+- Twitter: https://twitter.com/NeoNabil2
+- LinkedIn: https://www.linkedin.com/in/nabil-hayoun/
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
