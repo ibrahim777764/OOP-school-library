@@ -2,12 +2,12 @@ require './data'
 require './book'
 
 class BookLogic
-  include Data_b
+  include DataBase
 
   attr_accessor :books
 
   def initialize
-    @books = Data_b.books
+    @books = DataBase.books
   end
 
   def list_all_books

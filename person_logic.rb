@@ -2,12 +2,12 @@ require './data'
 require './person'
 
 class PersonLogic
-  include Data_b
+  include DataBase
 
   attr_accessor :persons
 
   def initialize
-    @persons = Data_b.persons
+    @persons = DataBase.persons
   end
 
   def list_all_persons

@@ -2,14 +2,13 @@ require './data'
 require './rental'
 
 class Rentals
-  
   attr_reader :books, :persons
   attr_accessor :rentals
 
   def initialize
-    @rentals = Data_b.rentals
-    @books = Data_b.books
-    @persons = Data_b.persons
+    @rentals = DataBase.rentals
+    @books = DataBase.books
+    @persons = DataBase.persons
   end
 
   def create_rental
