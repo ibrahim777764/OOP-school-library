@@ -23,9 +23,9 @@ def option(input)
   when '1'
     app.books_class.list_all_books
   when '2'
-    list_all_persons
+    app.persons_class.list_all_persons
   when '3'
-    create_person
+    app.persons_class.create_person
   when '4'
     app.books_class.create_book
   when '5'
