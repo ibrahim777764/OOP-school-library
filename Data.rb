@@ -1,4 +1,4 @@
-module Data
+module Data_b
   @books = []
 
   @persons = []
