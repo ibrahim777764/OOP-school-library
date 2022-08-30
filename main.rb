@@ -18,19 +18,20 @@ def list_of_options
 end
 
 def option(input)
+  app = App.new
   case input
   when '1'
-    list_all_books
+    app.books_class.list_all_books
   when '2'
-    list_all_persons
+    app.persons_class.list_all_persons
   when '3'
-    create_person
+    app.persons_class.create_person
   when '4'
-    create_book
+    app.books_class.create_book
   when '5'
-    create_rental
+    app.rentals.create_rental
   when '6'
-    list_all_rentals
+    app.rentals.list_all_rentals
   else
     puts 'Please enter a number between 1 and 7.'
   end
