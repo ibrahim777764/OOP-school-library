@@ -4,12 +4,11 @@ require './teacher'
 require './book'
 require './classroom'
 require './rental'
-require './bookLogic'
-require './personLogic'
+require './book_logic'
+require './person_logic'
 require './rentals'
 
 class App
-
   attr_accessor :books_class, :persons_class, :rentals
 
   def initialize
@@ -26,7 +25,6 @@ class App
         puts 'Thank You for using my School Library!'
         break
       end
-
       option input
     end
   end

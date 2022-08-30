@@ -1,21 +1,19 @@
 module Data
+  @books = []
 
-    @books = []
+  @persons = []
 
-    @persons = []
+  @rentals = []
 
-    @rentals = []
+  def self.books
+    @books
+  end
 
-    def self.books
-        @books
-    end
+  def self.persons
+    @persons
+  end
 
-    def self.persons
-        @persons
-    end
-
-    def self.rentals
-        @rentals
-    end
-
+  def self.rentals
+    @rentals
+  end
 end

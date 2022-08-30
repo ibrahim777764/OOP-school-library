@@ -1,4 +1,4 @@
-require './Data' # rubocop:disable Naming/FileName
+require './data'
 require './book'
 
 class BookLogic
